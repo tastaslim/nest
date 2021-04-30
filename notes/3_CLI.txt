@@ -1,0 +1,7 @@
+To create a controller, service, module using the CLI, simply execute:
+For Controller: $ nest g controller controllerName.
+For Module: $ nest g module moduleName.
+For Service: $ nest g service serviceName.
+
+Note: For all imports and proper connection in case of CLI,
+ start with creation of module and then service and then controller.

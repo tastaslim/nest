@@ -1,0 +1,41 @@
+1. A controller is responsible for handling incoming requests and returning responses to the client.
+2. A controller contains various routes and each route performs a unique task.
+3. For controller we use decorator: @Controller()
+
+@Controller()
+export class CatController{
+
+ }
+
+4. If we want to group all the operations which are for a specific kind( in our case cat): We just need to pass A
+path inside controller and then we can write various routes inside controller class.
+
+@Controller('cats)
+export class CatController{
+    .
+    .
+    .
+    .
+     
+    @Get('/breeds)
+    @HttpCode(200)
+    listCats():Promise<Array<Cat>>{
+        ......
+    }
+
+    @Get('/breeds/:breedId)
+    @HttpCode(200)
+    getSpecificCatBreed():Promise<Cat>{
+        ......
+    }
+
+    @Post('/breeds)
+    @HttpCode(201)
+    createBread(params):Promise<Cat>{
+        ......
+    }
+
+ }
+
+ 5. By default nest returns 200 response for all cases and hence it is our responsibility as a developer
+ to add @HttpCode() header properly in each route/function call.

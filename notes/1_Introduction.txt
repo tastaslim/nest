@@ -1,0 +1,19 @@
+1. Nest.js is one the frameworks of Node.js and it is plateform independent. Under the hood it uses Express(by default) but can 
+be configured to fastify.
+2. It's architecture is very similiar to angular.js.
+3. Nest has it's own and very powerfull cli. To install and create new project follow below commands:
+    $ npm i -g @nestjs/cli
+    $ nest new project-name
+4. It solves the problem of architecture and security in the server side programming and at the same time it is very efficient 
+as well as fast.
+5. Beauty of Nest.js is that since it uses express under the hood, we can also use modules of express.js directly just by importing them in nest and nest supports them.
+6. Applications built with nest are highly scalable, easy to test, debug and maintain.
+7. To create a Nest application instance, we use the core NestFactory class. NestFactory exposes a few static methods that allow 
+creating an application instance. The create() method returns an application object, which fulfills the INestApplication interface. 
+This object provides a set of methods which are described in the coming chapters.
+
+To  create modules, services and controllers we use decorators and classes.
+For service we use decorator: @Injectable()
+For controller we use decorator    : @Controller()
+For module  we use decorator    : @Module()
+
