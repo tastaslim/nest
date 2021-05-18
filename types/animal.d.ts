@@ -1,12 +1,4 @@
-export interface getBreedByIdParams {
-  breedId: string;
-}
-
-export interface searchBreedByNameParams {
-  breedName: string;
-}
-
-export interface Cat {
+export interface Animal {
   adaptability?: number;
   affection_level?: number;
   alt_names?: string;
@@ -64,9 +56,37 @@ export interface Vote {
   message?: string;
 }
 
+export interface Favourite {
+  created_at?: string;
+  id?: number;
+  image?: {
+    id?: string;
+    url?: string;
+  };
+  image_id?: string;
+  sub_id?: string;
+  user_id?: string;
+}
+
+export interface getBreedByIdParams {
+  breedId: string;
+}
+
+export interface searchBreedByNameParams {
+  breedName: string;
+}
+
 export interface createVoteParams {
   vote: Vote;
 }
 export interface getSpecificVoteParams {
   voteId: string;
+}
+
+export interface deleteVoteParams {
+  voteId: string;
+}
+
+export interface getFavouriteParams {
+  favouriteId: string;
 }

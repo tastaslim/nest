@@ -1,0 +1,19 @@
+1.For Post requests, we need some body as client param to create something, hence to do that we use 
+`````@Body() decorator````` for which we need to create a DTO to supply it for @Body() decorator
+
+A DTO is an object that defines how the data will be sent over the network. We could determine the DTO 
+schema by using TypeScript interfaces, or by simple classes. Interestingly, we recommend using classes 
+here. Why? Classes are part of the JavaScript ES6 standard, and therefore they are preserved as real 
+entities in the compiled JavaScript. On the other hand, since TypeScript interfaces are removed during 
+the transpilation, Nest can't refer to them at runtime.
+
+export class CreateCatDto {
+  name: string;
+  age: number;
+  breed: string;
+}
+
+@Post()
+async create(@Body() createCatDto: CreateCatDto) {
+ return ..... (createCatDto,...)
+}

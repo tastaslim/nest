@@ -1,0 +1,33 @@
+All decorators are imported from @nestjs/common package.
+To specify a custom response header, you can use a @Header() decorator.
+1. 
+  @Post()
+  @Header('Content-Type', 'application/json')
+  create() {
+    return 'This action adds a new cat';
+  }
+
+2. @Response() decorator redirects us to a specific url. It takes two optional parameters : url, statusCode
+   By default @Response() header returns 302 statusCode.
+   @Get()
+   @Response('https://nestjs.com", 200)
+   functionName(){
+     .......
+   }
+
+Let's say you want to pass dynamic statusCode and url, you can do that by using below Object:
+{
+  url: "provide url value"
+  statusCode: " provide status code value"
+}
+Just return any of this key value inside function, hence nestjs will automatically override the url value inside
+@Response() decorator.
+
+@Get()
+@Response()
+functionName(){
+  .
+  .
+  .
+  return {url:dynamicUrl,statusCode:dynamicStatusCode};
+}

@@ -7,10 +7,10 @@ export class CatController{
 
  }
 
-4. If we want to group all the operations which are for a specific kind( in our case cat): We just need to pass A
-path inside controller and then we can write various routes inside controller class.
+4. If we want to group all the operations which are for a specific kind( in our case cat): We just need to 
+pass a path inside controller and then we can write various routes inside controller class.
 
-@Controller('cats)
+@Controller('cats')
 export class CatController{
     .
     .
@@ -37,5 +37,5 @@ export class CatController{
 
  }
 
- 5. By default nest returns 200 response for all cases and hence it is our responsibility as a developer
- to add @HttpCode() header properly in each route/function call.
+ 5. By default nest returns 200 response for all cases except for Post(for which it is 201) and hence it 
+ is our responsibility as a developer to add @HttpCode() header properly in each route/function call.
