@@ -24,6 +24,8 @@
     "@nestjs/common": "^7.6.15",
     "@nestjs/core": "^7.6.15",
     "@nestjs/platform-express": "^7.6.15",
+    "@nestjs/typeorm": "^7.1.5",
+    "app-root-path": "^3.0.0",
     "axios": "^0.21.1",
     "better": "^0.1.0",
     "docs": "*",
@@ -33,6 +35,7 @@
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^6.6.6",
+    "swagger": "^0.7.5",
     "winston": "^3.3.3"
   },
   "devDependencies": {

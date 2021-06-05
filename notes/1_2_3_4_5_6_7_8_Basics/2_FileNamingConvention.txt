@@ -1,0 +1,12 @@
+In nest.js Files are named as follows:
+1. DTO: filename.dto.ts
+2. Controller: filename.controller.ts
+3. Module: filename.module.ts
+4. Service/Provider: filename.service.ts
+5. InterfaceFile: filename.interface.ts
+6. typesFile: filename.d.ts
+7. middleware: Filename.middleware.ts
+8. pipe: FileName.pipe.ts
+Testing files:
+ 1. For Service: filename.service.spec.ts
+ 2. For Controller: filename.controller.spec.ts

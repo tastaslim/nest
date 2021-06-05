@@ -1,11 +1,19 @@
-import { CatController } from './Animal/cat/cat.controller';
+import { DemoModule } from './demo/demo.module';
 import { Module } from '@nestjs/common';
-import { CatModule } from './Animal/cat/cat.module';
-import { CatService } from './Animal/cat/cat.service';
+import { TestModule } from './Test/test.module';
+import { SubTestModule } from './sub-test/sub-test.module';
+import { ExceptionPracticeModule } from './exception-practice/exception-practice.module';
+import { ExceptionFilterModule } from './exception-filter/exception-filter.module';
 
 @Module({
-  imports: [CatModule],
-  controllers: [CatController],
-  providers: [CatService],
+  imports: [
+    TestModule,
+    SubTestModule,
+    DemoModule,
+    ExceptionPracticeModule,
+    ExceptionFilterModule,
+  ],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
